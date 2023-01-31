@@ -110,7 +110,42 @@ public class TestSubtyping {
 //            contraPolyList.add(p);                  // ____
 
 
-        // TODO: Step 2: Predict what the results of these lines will be.
+        // TODO: Step 2a: Predict what the results of these lines will be.
+        //    Will they work, or will they lead to a static type error?
+        //    Then, uncomment them add check. Were your answers correct?
+//        paintAll(g, polyList);          // Ok/Error
+//        paintAll(g, triList);           // ____
+        // TODO: Step 2b: There's no reason why 'paintAll' shouldn't
+        //    work for both lists. Can you change the parameter type
+        //    for 'polygons' in the declaration of 'paintAll' below,
+        //    so that it works for both cases above?
+
+
+        // TODO: Step 3a: Predict what the results of these lines will be.
+        //    Will they work, or will they lead to a static type error?
+        //    Then, uncomment them add check. Were your answers correct?
+//        addAll(polyList, polyList);       // Ok/Error
+//        addAll(triList, polyList);        // ____
+//        addAll(polyList, triList);        // ____
+//        addAll(triList, triList);         // ____
+        // TODO: Step 3b: Can you change the parameter types for 'from'
+        //    and 'to' in the declaration of 'addAll' below, to make it
+        //    work for three out of four cases above?
+        //    Why can you not make it work for the fourth?
+        //    (Hint: it's for a good reason.)
+
+
+        final Polygon polygon = pol;
+        // TODO: Step 4: Look up the types of the three following methods
+        //    from Java's standard libraries (hover over the method names
+        //    in IntelliJ, don't mind the warnings).
+        //    Can you explain why they have the declared types they do?
+        polyList.addAll(triList);                       // What is the parameter type of addAll? ____
+        boolean b = polyList.containsAll(triList);      // What is the parameter type of containsAll? ____
+        polyList.removeIf(p -> p.equals(polygon));      // What is the parameter type of removeIf? ____
+
+
+        // TODO: Step 5: Predict what the results of these lines will be.
         //    Will they work? Will they lead to a static type error?
         //    Will they cause a dynamic (runtime) error (i.e. an exception)?
         //    If they cause an error, why?
@@ -122,39 +157,6 @@ public class TestSubtyping {
 //        polyList = triList;             // ____
 //        polyList.add(0, squ);           // ____
 //        tri = triList.get(0);           // ____
-
-        // TODO: Step 3a: Predict what the results of these lines will be.
-        //    Will they work, or will they lead to a static type error?
-        //    Then, uncomment them add check. Were your answers correct?
-//        paintAll(g, polyList);          // Ok/Error
-//        paintAll(g, triList);           // ____
-        // TODO: Step 3b: There's no reason why 'paintAll' shouldn't
-        //    work for both lists. Can you change the parameter type
-        //    for 'polygons' in the declaration of 'paintAll' below,
-        //    so that it works for both cases above?
-
-
-        // TODO: Step 3c: Predict what the results of these lines will be.
-        //    Will they work, or will they lead to a static type error?
-        //    Then, uncomment them add check. Were your answers correct?
-//        addAll(polyList, polyList);       // Ok/Error
-//        addAll(triList, polyList);        // ____
-//        addAll(polyList, triList);        // ____
-//        addAll(triList, triList);         // ____
-        // TODO: Step 3d: Can you change the parameter types for 'from'
-        //    and 'to' in the declaration of 'addAll' below, to make it
-        //    work for three out of four cases above?
-        //    Why can you not make it work for the fourth?
-        //    (Hint: it's for a good reason.)
-
-        final Polygon polygon = pol;
-        // TODO: Step 4: Look up the types of the three following methods
-        //    from Java's standard libraries (hover over the method names
-        //    in IntelliJ, don't mind the warnings).
-        //    Can you explain why they have the declared types they do?
-        polyList.addAll(triList);                       // What is the parameter type of addAll? ____
-        boolean b = polyList.containsAll(triList);      // What is the parameter type of containsAll? ____
-        polyList.removeIf(p -> p.equals(polygon));      // What is the parameter type of removeIf? ____
 
     }
 
