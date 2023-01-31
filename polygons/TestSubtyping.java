@@ -120,14 +120,14 @@ public class TestSubtyping {
 //        tri = triArray[0];              // ____
 //
 //        polyList = triList;             // ____
-//        polyList.add(0, squ);     // ____
+//        polyList.add(0, squ);           // ____
 //        tri = triList.get(0);           // ____
 
         // TODO: Step 3a: Predict what the results of these lines will be.
         //    Will they work, or will they lead to a static type error?
         //    Then, uncomment them add check. Were your answers correct?
 //        paintAll(g, polyList);          // Ok/Error
-//        paintAll(g, triList);           // Ok/Error
+//        paintAll(g, triList);           // ____
         // TODO: Step 3b: There's no reason why 'paintAll' shouldn't
         //    work for both lists. Can you change the parameter type
         //    for 'polygons' in the declaration of 'paintAll' below,
@@ -137,10 +137,10 @@ public class TestSubtyping {
         // TODO: Step 3c: Predict what the results of these lines will be.
         //    Will they work, or will they lead to a static type error?
         //    Then, uncomment them add check. Were your answers correct?
-//        addAll(polyList, polyList);
-//        addAll(triList, polyList);
-//        addAll(polyList, triList);
-//        addAll(triList, triList);
+//        addAll(polyList, polyList);       // Ok/Error
+//        addAll(triList, polyList);        // ____
+//        addAll(polyList, triList);        // ____
+//        addAll(triList, triList);         // ____
         // TODO: Step 3d: Can you change the parameter types for 'from'
         //    and 'to' in the declaration of 'addAll' below, to make it
         //    work for three out of four cases above?
@@ -152,9 +152,9 @@ public class TestSubtyping {
         //    from Java's standard libraries (hover over the method names
         //    in IntelliJ, don't mind the warnings).
         //    Can you explain why they have the declared types they do?
-        polyList.addAll(triList);
-        boolean b = polyList.containsAll(triList);
-        polyList.removeIf(p -> p.equals(polygon));
+        polyList.addAll(triList);                       // What is the parameter type of addAll? ____
+        boolean b = polyList.containsAll(triList);      // What is the parameter type of containsAll? ____
+        polyList.removeIf(p -> p.equals(polygon));      // What is the parameter type of removeIf? ____
 
     }
 
