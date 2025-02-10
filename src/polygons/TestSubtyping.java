@@ -36,11 +36,11 @@ public class TestSubtyping {
         Square   squ = new Square(3, 3);
 
 
-        // TODO: Step 1a: Predict what the results of these lines will be.
+        // TODO: Step 1a: Predict what the results of these lines w ill be.
         //    Will they work? Will they lead to a static type error?
         //    Will they cause a dynamic (runtime) error (i.e. an exception)?
         //    If they cause an error, why?
-//        polyArray[0] = pol;                   // OK/Static error/Dynamic error
+          polyArray[0] = pol;                   // OK/Static error/Dynamic error
 //        polyArray[1] = tri;                   // ____
 //        triArray[0]  = pol;                   // ____
 //        triArray[1]  = tri;                   // ____
